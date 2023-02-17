@@ -21,6 +21,7 @@ import 'package:gtm_foodapp_popup_screens/menu/menu.dart';
 import 'package:gtm_foodapp_popup_screens/microphonePermissionNotEnabled/microphone_permission_not_enabled.dart';
 import 'package:gtm_foodapp_popup_screens/placingYourOrder/placing_your_order.dart';
 import 'package:gtm_foodapp_popup_screens/productListingInMart/product_listing_in_mart.dart';
+import 'package:gtm_foodapp_popup_screens/profile/profile.dart';
 import 'package:gtm_foodapp_popup_screens/repeatWithSameCombination/repeat_with_same_combination.dart';
 import 'package:gtm_foodapp_popup_screens/selectOption/select_option.dart';
 import 'package:gtm_foodapp_popup_screens/shopCategory/shop_category.dart';
@@ -33,7 +34,8 @@ void main() => runApp(GetMaterialApp(
         GetPage(
             name: rProductListingInMart, page: () => ProductListingInMart()),
         GetPage(name: rFoods, page: () => Foods()),
-        GetPage(name: rChangePassword, page: () => ChangePassword())
+        GetPage(name: rChangePassword, page: () => ChangePassword()),
+        GetPage(name: rProfiles, page: () => Profile())
       ],
       home: MyApp(),
     ));
@@ -50,6 +52,9 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              ElevatedButton(
+                  onPressed: () => Get.toNamed(rProfiles),
+                  child: const Text('Profile')),
               ElevatedButton(
                   onPressed: () => Get.toNamed(rChangePassword),
                   child: const Text('ChangePassword')),
