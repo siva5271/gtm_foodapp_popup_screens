@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:gtm_foodapp_popup_screens/bottomModalSheetWidgets/bottom_modalsheet_script.dart';
 import 'package:gtm_foodapp_popup_screens/bottomModalSheetWidgets/bottom_modalsheet_title.dart';
 import 'package:gtm_foodapp_popup_screens/constants/colors.dart';
+import 'package:gtm_foodapp_popup_screens/constants/styles.dart';
 import 'package:gtm_foodapp_popup_screens/universalWidgets/bottom_green_container.dart';
 
 const kAppBarWidth = SizedBox(width: 5);
@@ -16,11 +17,7 @@ class ProductListingInMart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.keyboard_arrow_left_outlined,
-          size: 40,
-          color: Colors.black,
-        ),
+        leading: kAppBarBackIcon,
         backgroundColor: Colors.white,
         title: Row(
           children: [

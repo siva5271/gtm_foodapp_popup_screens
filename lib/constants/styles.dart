@@ -23,3 +23,9 @@ const kTableHeadingTextStyle =
 
 const kTableContentsTextStyle =
     TextStyle(fontSize: 10, fontWeight: FontWeight.w500);
+
+const kAppBarBackIcon = Icon(
+  Icons.keyboard_arrow_left_outlined,
+  size: 40,
+  color: Colors.black,
+);

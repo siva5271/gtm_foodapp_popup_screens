@@ -11,6 +11,7 @@ import 'package:gtm_foodapp_popup_screens/deviceLocationNotEnabled/device_locati
 import 'package:gtm_foodapp_popup_screens/discardAllItems/discard_all_items.dart';
 import 'package:gtm_foodapp_popup_screens/foodDetails1/food_details1.dart';
 import 'package:gtm_foodapp_popup_screens/foodDetails2/food_details2.dart';
+import 'package:gtm_foodapp_popup_screens/foods/foods.dart';
 import 'package:gtm_foodapp_popup_screens/howWeCalculateDeliveryCharge/how_we_calculate_delivery_charge.dart';
 import 'package:gtm_foodapp_popup_screens/listenCorrect/listen_correct.dart';
 import 'package:gtm_foodapp_popup_screens/listening/listening.dart';
@@ -28,7 +29,9 @@ import 'loginEdit/login_edit.dart';
 
 void main() => runApp(GetMaterialApp(
       getPages: [
-        GetPage(name: rProductListingInMart, page: () => ProductListingInMart())
+        GetPage(
+            name: rProductListingInMart, page: () => ProductListingInMart()),
+        GetPage(name: rFoods, page: () => Foods())
       ],
       home: MyApp(),
     ));
@@ -45,6 +48,9 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              ElevatedButton(
+                  onPressed: () => Get.toNamed(rFoods),
+                  child: const Text('Foods')),
               ElevatedButton(
                   onPressed: () => Get.bottomSheet(const LoginEdit(),
                       isScrollControlled: true),
