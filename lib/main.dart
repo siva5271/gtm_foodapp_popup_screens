@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gtm_foodapp_popup_screens/addNewAddress/add_new_address.dart';
 import 'package:gtm_foodapp_popup_screens/afterSubmitFeedback/after_submit_feedback.dart';
 import 'package:gtm_foodapp_popup_screens/availableCoupons/available_coupons.dart';
+import 'package:gtm_foodapp_popup_screens/changePassword/change_password.dart';
 import 'package:gtm_foodapp_popup_screens/changePasswordVar2/change_password_var2.dart';
 import 'package:gtm_foodapp_popup_screens/constants/routes.dart';
 import 'package:gtm_foodapp_popup_screens/couponDetails/coupon_details.dart';
@@ -31,7 +32,8 @@ void main() => runApp(GetMaterialApp(
       getPages: [
         GetPage(
             name: rProductListingInMart, page: () => ProductListingInMart()),
-        GetPage(name: rFoods, page: () => Foods())
+        GetPage(name: rFoods, page: () => Foods()),
+        GetPage(name: rChangePassword, page: () => ChangePassword())
       ],
       home: MyApp(),
     ));
@@ -48,6 +50,9 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              ElevatedButton(
+                  onPressed: () => Get.toNamed(rChangePassword),
+                  child: const Text('ChangePassword')),
               ElevatedButton(
                   onPressed: () => Get.toNamed(rFoods),
                   child: const Text('Foods')),
