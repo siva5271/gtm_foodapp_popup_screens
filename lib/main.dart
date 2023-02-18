@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gtm_foodapp_popup_screens/addNewAddress/add_new_address.dart';
 import 'package:gtm_foodapp_popup_screens/afterSubmitFeedback/after_submit_feedback.dart';
 import 'package:gtm_foodapp_popup_screens/availableCoupons/available_coupons.dart';
+import 'package:gtm_foodapp_popup_screens/cart/cart.dart';
 import 'package:gtm_foodapp_popup_screens/changePassword/change_password.dart';
 import 'package:gtm_foodapp_popup_screens/changePasswordVar2/change_password_var2.dart';
 import 'package:gtm_foodapp_popup_screens/constants/routes.dart';
@@ -52,6 +53,8 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              ElevatedButton(
+                  onPressed: () => Get.to(Cart()), child: const Text('cart')),
               ElevatedButton(
                   onPressed: () => Get.toNamed(rProfiles),
                   child: const Text('Profile')),
